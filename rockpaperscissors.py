@@ -21,6 +21,7 @@ stream1 = stream.Stream()
 
 window = Tk()
 window.geometry('500x300')
+window.title("Rock, Paper, Scissors!")
 var = IntVar()
 key_var = IntVar()
 cont_q = IntVar()
@@ -29,17 +30,17 @@ def matching(choice1, choice2):
     major_triad = ['C', 'E', 'G']
     minor_triad = ['C', 'Eb', 'G']
     if choice1 == choice2: # tie
-        note_equal = note.Note('B', type = 'half')
+        note_equal = note.Note('B', type = 'quarter')
         stream1.append(note_equal)
         return 'B'
     elif options.get(choice1) == choice2: # if user_choice defeats computer_choice
         sound = random.choice(major_triad)
-        note_victory = note.Note(sound, type = 'whole')
+        note_victory = note.Note(sound, type = 'half')
         stream1.append(note_victory)
         return sound
     else:
         sound = random.choice(minor_triad) #if user is defeated
-        note_defeat = note.Note(sound, type = 'whole')
+        note_defeat = note.Note(sound, type = 'half')
         stream1.append(note_defeat)
         return sound
 
@@ -86,6 +87,7 @@ exit.pack(anchor = 'center')
 
 #execute
 window.mainloop()
+
 
 
 
