@@ -1,4 +1,1 @@
-# rockpaperscissors
-Creates GUI for algorithmic composition based on results of rock paper scissors game with computer.
-Update with key choice coming - currently only works for key of C.
-MIDI file will save with random name.
+Creates a GUI that allows the user to make algorithmic music based on the results of a rock-paper-scissors game with the computer. The outcome of each round decides what note is appended to a MIDI stream: if the user wins, it will be a random choice out of the major triad of C; if she loses, the choice will be made out of the minor triad. In the case of a tie, the note B is appended. An improved approach would be to let the user decide which key to use; this update is forthcoming.
